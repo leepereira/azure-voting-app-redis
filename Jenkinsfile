@@ -15,6 +15,7 @@ pipeline {
                   pwd
                   hostname
                   ls -ltr
+                  docker images -a
                   """)
 
             }
