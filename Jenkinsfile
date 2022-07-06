@@ -13,6 +13,8 @@ pipeline {
                 sh(script: """
                   cd azure-vote/
                   pwd
+                  hostname
+                  ls -ltr
                   """)
 
             }
