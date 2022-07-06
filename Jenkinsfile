@@ -12,7 +12,8 @@ pipeline {
                 sh(script: 'echo Hello World')
                 sh(script: """
                   cd azure-vote/
-                  pwd)
+                  pwd
+                  """)
 
             }
         }        
