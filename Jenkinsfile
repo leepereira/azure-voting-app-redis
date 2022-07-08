@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 echo "$GIT_BRANCH"
-                // echo "$TAG_NAME"
+                echo "${env.TAG_NAME}"
                 // echo "$TAG_DATE"
                 // echo "$BRANCH_NAME"
             }
