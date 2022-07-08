@@ -5,8 +5,13 @@ pipeline {
         stage('Verify Branch') {
             steps {
                 echo "$GIT_BRANCH"
+                echo "$TAG_NAME"
+                echo "$TAG_DATE"
+                echo "$BRANCH_NAME"
+
             }
         }
+        // http://18.237.30.93:8080/pipeline-syntax/globals#env
         // stage('Docker Build') {
         //     steps {
         //         sh(script: 'echo Hello World')
