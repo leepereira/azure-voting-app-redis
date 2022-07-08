@@ -60,8 +60,8 @@ pipeline {
                 echo "Work space ins $WORKSPACE"
                 dir("$WORKSPACE/azure-vote") {
                     script {
-                        docker.withRegistry('https://hub.docker.com/', 'dockerhub_creds') {
-                            def image = docker.build('leepereira/jenkins-pipeline:latest')
+                        docker.withRegistry('https://index.docker.io/v1', 'dockerhub_creds') {
+                            def image = docker.build('jenkins-pipeline:latest')
                             image.push()
                         }
                     }
