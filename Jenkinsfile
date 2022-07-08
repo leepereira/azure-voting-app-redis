@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        TOP_LEVEL_LAST_NAME = "Pereira"
+    }
 
     stages {
         stage('Build') {
