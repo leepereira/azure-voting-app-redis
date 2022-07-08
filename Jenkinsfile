@@ -53,6 +53,20 @@ pipeline {
                   docker-compose down
                 """)
             }
+        }
+
+        stage('Push Container') {
+            steps {
+                echo "Work space ins $WORKSPACE"
+                dir("$WORKSPACE/azure-vote") {
+                    script {
+                        docker.withRegistry('https://index.docker.io/v1', 'dockerhub_creds') {
+                            def image = docker.build('leepereira/jenkins-pipeline:latest')
+                            image.push()
+                        }
+                    }
+                }
+            }
         }        
     }
 }
