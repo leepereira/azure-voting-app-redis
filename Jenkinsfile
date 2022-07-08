@@ -8,7 +8,7 @@ pipeline {
                 echo "$GIT_BRANCH"
                 echo "$MY_NAME from the github configuration under manage jenkins"
                 echo "${env.FIRST_NAME} from the local OS environment"
-                echo $HOSTNAME
+                echo "${env.HOSTNAME}
                 echo "${env.LOGNAME} from the local OS environment"
                 // echo "$BRANCH_NAME"
             }
