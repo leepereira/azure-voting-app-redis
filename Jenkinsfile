@@ -39,13 +39,13 @@ pipeline {
                 }
             }
         }
-        stage('run Tests') {
-            steps {
-                pwsh(script: """
-                  pytest ./test/test_sample.py
-                """)
-            }    
-        }
+        // stage('run Tests') {
+        //     steps {
+        //         pwsh(script: """
+        //           pytest ./test/test_sample.py
+        //         """)
+        //     }    
+        // }
 
         stage('Stop Test App') {
             steps {
